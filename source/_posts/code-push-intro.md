@@ -50,3 +50,16 @@ npm install -g code-push-cli
 {% asset_img CodePushConfig.m.png CodePushConfig.m %}
 
 好了，简介就到这里了，大家感兴趣的话可以移步 [code push 官方网站](http://microsoft.github.io/code-push/index.html)来获取更多信息。
+
+------------------
+
+PS: 刚刚确认了一下，苹果最近更新了 app 上架条例。之前的条例不允许 app 下载除运行在 wekbit 内部之外的任何可执行代码。但是，最新版本的条例又加上了一个例外：JavascriptCore。JavascriptCore 也就是内建的 js 引擎，也就是 ReactNative 的 [js 执行环境](http://facebook.github.io/react-native/docs/javascript-environment.html#content)。 看上去这个更新就是给 ReactNative 量身定做的啊。下边这段选自苹果的 [app 程序条例](https://developer.apple.com/programs/ios/information/iOS_Program_Information_4_3_15.pdf)：
+
+> 3.3.2 An Application may not download or install executable code. Interpreted
+code may only be used in an Application if all scripts, code and interpreters are
+packaged in the Application and not downloaded. The only exception to the
+foregoing is scripts and code downloaded and run by Apple's built-in WebKit
+framework or `JavascriptCore`, provided that such scripts and code do not change
+the primary purpose of the Application by providing features or functionality that are
+inconsistent with the intended and advertised purpose of the Application as
+submitted to the App Store.
